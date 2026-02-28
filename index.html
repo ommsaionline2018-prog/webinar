@@ -61,19 +61,18 @@ function updateTimer(){
     "Next Live Session: Today at 7 PM<br>" + h+"h "+m+"m "+s+"s";
 
   if(!started){
-    started = true;
+  started = true;
 
-    document.getElementById("image").style.display="none";
-    document.getElementById("video").style.display="block";
+  document.getElementById("image").style.display="none";
+  document.getElementById("video").style.display="block";
 
-    // stop music
-    document.getElementById("bgmusic").pause();
+  // stop music
+  document.getElementById("bgmusic").pause();
 
-    // redirect after video (22 min 4 sec)
-    setTimeout(()=>{
-      window.location.href="https://wa.me/919827911180?text=Hello%20sir,%20mu%20apananka%20webinar%20dekhiki%20asichi%20🙏%20Mate%20CSC%20join%20karibara%20achi.%20Please%20guide%20karantu";
-    }, 30000);
-  }
+  // test redirect (30 sec)
+  setTimeout(()=>{
+    window.location.href="https://wa.me/919827911180?text=Hello%20sir,%20mu%20apananka%20webinar%20dekhiki%20asichi%20🙏%20Mate%20CSC%20join%20karibara%20achi.%20Please%20guide%20karantu";
+  }, 30000);
 }
 
 setInterval(updateTimer,1000);
